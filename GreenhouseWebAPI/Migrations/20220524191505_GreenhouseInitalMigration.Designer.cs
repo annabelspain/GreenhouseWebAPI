@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GreenhouseWebAPI.Migrations
 {
     [DbContext(typeof(GreenhouseContext))]
-    [Migration("20220524183348_GreenhouseInitalMigration")]
+    [Migration("20220524191505_GreenhouseInitalMigration")]
     partial class GreenhouseInitalMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -18,8 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="wwwroot\js\" />
-    <Folder Include="wwwroot\stylesheets\" />
   </ItemGroup>
 
   <ItemGroup>

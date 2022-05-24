@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZBOSrjYFuEQ1WZgwk9MI/cMPlDZVpDAVIidbdhyHMm8=",
+  "Hash": "dwNB1UxRCv9WRWvLqp+9JbrxODDxbcoB1VJBFh2NFtk=",
   "Source": "GreenhouseWebAPI",
   "BasePath": "_content/GreenhouseWebAPI",
   "Mode": "Default",
@@ -32,6 +32,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Greenhouse.html"
+    },
+    {
+      "Identity": "C:\\GreenhouseWebAPI\\GreenhouseWebAPI\\GreenhouseWebAPI\\wwwroot\\js\\JavaScript.js",
+      "SourceId": "GreenhouseWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GreenhouseWebAPI\\GreenhouseWebAPI\\GreenhouseWebAPI\\wwwroot\\",
+      "BasePath": "_content/GreenhouseWebAPI",
+      "RelativePath": "js/JavaScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\JavaScript.js"
+    },
+    {
+      "Identity": "C:\\GreenhouseWebAPI\\GreenhouseWebAPI\\GreenhouseWebAPI\\wwwroot\\stylesheets\\StyleSheet.css",
+      "SourceId": "GreenhouseWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GreenhouseWebAPI\\GreenhouseWebAPI\\GreenhouseWebAPI\\wwwroot\\",
+      "BasePath": "_content/GreenhouseWebAPI",
+      "RelativePath": "stylesheets/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\stylesheets\\StyleSheet.css"
     }
   ]
 }
