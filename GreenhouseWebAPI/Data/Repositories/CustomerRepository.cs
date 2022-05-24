@@ -21,16 +21,32 @@ namespace GreenhouseWebAPI.Data.Repositories
         }
         public bool Exists(int id)
         {
-            return _customerContext.Customers.Any(u => u.Id == id);
+            return _customerContext.Customers.Any(u => u.CustomerId == id);
         }
         public Customer Get(int id)
         {
-            return _customerContext.Customers.FirstOrDefault(u => u.Id == id);
+            return _customerContext.Customers.FirstOrDefault(u => u.CustomerId == id);
         }
         public IEnumerable<Customer> GetAll()
         {
             return _customerContext.Customers.ToList();
         }
+
+        /*
+        public IEnumerable<string> GetJoinedData()
+        {
+            List<Customer> customers = _customerContext.Customers.ToList();
+            List<GreenhouseItem> greenhouseItems = _customerContext.Greenhouse.ToList();
+
+            var result = from customer in customers
+                         join greenhouseItem in greenhouseItems
+                         on customer.Order equals customers.Order
+                         select $"{customer.CustomerId} {greenhouseItem.Order}";
+            return result;
+
+        }
+        */
+
         public bool Save()
         {
             return _customerContext.SaveChanges() > 0;

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GreenhouseWebAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]//URL: http://localhost:5066/greenhouse
+    [Route("[controller]")]//URL: http://localhost:5000/greenhouse
     public class GreenhouseController : ControllerBase
     {
         private readonly ICrudService<GreenhouseItem, int> _greenhouseService;
@@ -35,7 +35,7 @@ namespace GreenhouseWebAPI.Controllers
             if (ModelState.IsValid)
             {
                 _greenhouseService.Add(greenhouse);
-                return CreatedAtAction(nameof(Create), new { id = greenhouse.Id }, greenhouse);
+                return CreatedAtAction(nameof(Create), new { id = greenhouse.GreenhouseId }, greenhouse);
             }
             return BadRequest();
         }
@@ -45,7 +45,7 @@ namespace GreenhouseWebAPI.Controllers
         public IActionResult Update(int id, GreenhouseItem greenhouse)
         {
             var existingGreenhouseItem = _greenhouseService.Get(id);
-            if (existingGreenhouseItem is null || existingGreenhouseItem.Id != id)
+            if (existingGreenhouseItem is null || existingGreenhouseItem.GreenhouseId != id)
             {
                 return BadRequest();
             }

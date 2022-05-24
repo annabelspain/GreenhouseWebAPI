@@ -14,6 +14,8 @@ builder.Services.AddDbContext<GreenhouseContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ICrudRepository<GreenhouseItem, int>, GreenhouseRepository>();
 builder.Services.AddScoped<ICrudService<GreenhouseItem, int>, GreenhouseService>();
+builder.Services.AddScoped<ICrudRepository<Customer, int>, CustomerRepository>();
+builder.Services.AddScoped<ICrudRepository<Customer, int>, CustomerService>();
 
 
 builder.Services.AddCors(options =>

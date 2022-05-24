@@ -5,14 +5,17 @@ namespace GreenhouseWebAPI.Models
     public class GreenhouseItem
     {
         [Key]
-        public int Id { get; set; }
+        public int GreenhouseId { get; set; }
 
-        [Required(ErrorMessage = "Name Required")]
+        [Required(ErrorMessage = "Plant Required")]
         [MaxLength(25, ErrorMessage = "Length of description cannot be greater than 25 characters")]
-        public string? Name { get; set; }
+        public string? Plant { get; set; }
 
         [Required(ErrorMessage = "Age Required")]
         public int? Age { get; set; }
+
+        [Required(ErrorMessage ="Order Required")]
+        public string? Order { get; set; }
 
         [Required(ErrorMessage = "Price Required")]
         public decimal? Price { get; set; }

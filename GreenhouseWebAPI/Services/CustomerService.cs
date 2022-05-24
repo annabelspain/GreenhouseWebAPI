@@ -35,5 +35,12 @@ namespace GreenhouseWebAPI.Services
             _customerRepository.Update(old);
             _customerRepository.Save();
         }
+
+        /*
+        public IEnumerable<string> GetJoinedData()
+        {
+            return ((CustomerRepository)_customerRepository).GetJoinedData();
+        }
+        */
     }
 }

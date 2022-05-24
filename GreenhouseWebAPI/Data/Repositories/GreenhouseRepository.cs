@@ -21,11 +21,11 @@ namespace GreenhouseWebAPI.Data.Repositories
         }
         public bool Exists(int id)
         {
-            return _greenhouseContext.GreenhouseItems.Any(u => u.Id == id);
+            return _greenhouseContext.GreenhouseItems.Any(u => u.GreenhouseId == id);
         }
         public GreenhouseItem Get(int id)
         {
-            return _greenhouseContext.GreenhouseItems.FirstOrDefault(u => u.Id == id);
+            return _greenhouseContext.GreenhouseItems.FirstOrDefault(u => u.GreenhouseId == id);
         }
         public IEnumerable<GreenhouseItem> GetAll()
         {
