@@ -15,7 +15,7 @@ namespace GreenhouseWebAPI.Models
         public int? Age { get; set; }
 
         [Required(ErrorMessage = "Price Required")]
-        public int? Price { get; set; }
+        public decimal? Price { get; set; }
 
         [Required(ErrorMessage = "Description is required")]
         [MaxLength(64, ErrorMessage = "Length of description cannot be greater than 64 characters")]
