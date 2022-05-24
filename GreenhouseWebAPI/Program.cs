@@ -15,6 +15,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 builder.Services.AddScoped<ICrudRepository<GreenhouseItem, int>, GreenhouseRepository>();
 builder.Services.AddScoped<ICrudService<GreenhouseItem, int>, GreenhouseService>();
 
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
