@@ -7,7 +7,10 @@ namespace GreenhouseWebAPI.Data
     {
         public GreenhouseContext(DbContextOptions<GreenhouseContext> options) : base(options)
         {
+
         }
         public DbSet<GreenhouseItem> GreenhouseItems { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
     }
 }

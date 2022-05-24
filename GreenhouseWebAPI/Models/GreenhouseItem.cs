@@ -16,9 +16,11 @@ namespace GreenhouseWebAPI.Models
 
         [Required(ErrorMessage ="Order Required")]
         public string? Order { get; set; }
+        /*
 
         [Required(ErrorMessage = "Price Required")]
-        public decimal? Price { get; set; }
+        public double? Price { get; set; }
+        */
 
         [Required(ErrorMessage = "Description is required")]
         [MaxLength(64, ErrorMessage = "Length of description cannot be greater than 64 characters")]

@@ -15,8 +15,9 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 builder.Services.AddScoped<ICrudRepository<GreenhouseItem, int>, GreenhouseRepository>();
 builder.Services.AddScoped<ICrudService<GreenhouseItem, int>, GreenhouseService>();
 builder.Services.AddScoped<ICrudRepository<Customer, int>, CustomerRepository>();
-builder.Services.AddScoped<ICrudRepository<Customer, int>, CustomerService>();
-
+builder.Services.AddScoped<ICrudService<Customer, int>, CustomerService>();
+builder.Services.AddScoped<ICrudRepository<OrderItem, int>, OrderRepository>();
+builder.Services.AddScoped<ICrudService<OrderItem, int>, OrderService>();
 
 builder.Services.AddCors(options =>
 {

@@ -4,32 +4,32 @@ namespace GreenhouseWebAPI.Data.Repositories
 {
     public class CustomerRepository : ICrudRepository<Customer, int>
     {
-        private readonly CustomerContext _customerContext;
-        public CustomerRepository(CustomerContext customerContext)
+        private readonly GreenhouseContext _greenhouseContext;
+        public CustomerRepository(GreenhouseContext customerContext)
         {
-            _customerContext = customerContext ?? throw new
+            _greenhouseContext = customerContext ?? throw new
             ArgumentNullException(nameof(customerContext));
         }
         public void Add(Customer element)
         {
-            _customerContext.Customers.Add(element);
+            _greenhouseContext.Customers.Add(element);
         }
         public void Delete(int id)
         {
             var item = Get(id);
-            if (item is not null) _customerContext.Customers.Remove(Get(id));
+            if (item is not null) _greenhouseContext.Customers.Remove(Get(id));
         }
         public bool Exists(int id)
         {
-            return _customerContext.Customers.Any(u => u.CustomerId == id);
+            return _greenhouseContext.Customers.Any(u => u.CustomerId == id);
         }
         public Customer Get(int id)
         {
-            return _customerContext.Customers.FirstOrDefault(u => u.CustomerId == id);
+            return _greenhouseContext.Customers.FirstOrDefault(u => u.CustomerId == id);
         }
         public IEnumerable<Customer> GetAll()
         {
-            return _customerContext.Customers.ToList();
+            return _greenhouseContext.Customers.ToList();
         }
 
         /*
@@ -49,11 +49,11 @@ namespace GreenhouseWebAPI.Data.Repositories
 
         public bool Save()
         {
-            return _customerContext.SaveChanges() > 0;
+            return _greenhouseContext.SaveChanges() > 0;
         }
         public void Update(Customer element)
         {
-            _customerContext.Update(element);
+            _greenhouseContext.Update(element);
         }
     }
 }
