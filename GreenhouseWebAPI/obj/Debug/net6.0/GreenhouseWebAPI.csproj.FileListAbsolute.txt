@@ -59,3 +59,4 @@ C:\GreenhouseWebAPI\GreenhouseWebAPI\GreenhouseWebAPI\obj\Debug\net6.0\refint\Gr
 C:\GreenhouseWebAPI\GreenhouseWebAPI\GreenhouseWebAPI\obj\Debug\net6.0\GreenhouseWebAPI.pdb
 C:\GreenhouseWebAPI\GreenhouseWebAPI\GreenhouseWebAPI\obj\Debug\net6.0\GreenhouseWebAPI.genruntimeconfig.cache
 C:\GreenhouseWebAPI\GreenhouseWebAPI\GreenhouseWebAPI\obj\Debug\net6.0\ref\GreenhouseWebAPI.dll
+C:\GreenhouseWebAPI\GreenhouseWebAPI\GreenhouseWebAPI\bin\Debug\net6.0\GreenhouseWebAPI.staticwebassets.runtime.json

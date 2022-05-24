@@ -16,4 +16,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\stylesheets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Greenhouse.html" />
+  </ItemGroup>
+
 </Project>

@@ -9,7 +9,7 @@ namespace GreenhouseWebAPI.Controllers
     public class OrderController : ControllerBase
     {
         private readonly ICrudService<OrderItem, int> _orderService;
-        public OrderController(ICrudService<OrderItem, int> srderService)
+        public OrderController(ICrudService<OrderItem, int> orderService)
         {
             _orderService = orderService;
         }
@@ -35,7 +35,7 @@ namespace GreenhouseWebAPI.Controllers
             if (ModelState.IsValid)
             {
                 _orderService.Add(order);
-                return CreatedAtAction(nameof(Create), new { id = order.orderId }, order);
+                return CreatedAtAction(nameof(Create), new { id = order.OrderId }, order);
             }
             return BadRequest();
         }
@@ -45,7 +45,7 @@ namespace GreenhouseWebAPI.Controllers
         public IActionResult Update(int id, OrderItem order)
         {
             var existingOrderItem = _orderService.Get(id);
-            if (existingOrderItem is null || existingOrderItem.orderId != id)
+            if (existingOrderItem is null || existingOrderItem.OrderId != id)
             {
                 return BadRequest();
             }

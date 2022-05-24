@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "2OFdvocngTcIh26SrmmcFcLwGSTM180vS9jEufwjyRs=",
+  "Hash": "ZBOSrjYFuEQ1WZgwk9MI/cMPlDZVpDAVIidbdhyHMm8=",
   "Source": "GreenhouseWebAPI",
   "BasePath": "_content/GreenhouseWebAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "GreenhouseWebAPI\\wwwroot",
+      "Source": "GreenhouseWebAPI",
+      "ContentRoot": "C:\\GreenhouseWebAPI\\GreenhouseWebAPI\\GreenhouseWebAPI\\wwwroot\\",
+      "BasePath": "_content/GreenhouseWebAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\GreenhouseWebAPI\\GreenhouseWebAPI\\GreenhouseWebAPI\\wwwroot\\Greenhouse.html",
+      "SourceId": "GreenhouseWebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GreenhouseWebAPI\\GreenhouseWebAPI\\GreenhouseWebAPI\\wwwroot\\",
+      "BasePath": "_content/GreenhouseWebAPI",
+      "RelativePath": "Greenhouse.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Greenhouse.html"
+    }
+  ]
 }

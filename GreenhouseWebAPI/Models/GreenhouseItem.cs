@@ -16,8 +16,8 @@ namespace GreenhouseWebAPI.Models
 
         [Required(ErrorMessage ="Order Required")]
         public string? Order { get; set; }
-        /*
 
+        /*
         [Required(ErrorMessage = "Price Required")]
         public double? Price { get; set; }
         */
