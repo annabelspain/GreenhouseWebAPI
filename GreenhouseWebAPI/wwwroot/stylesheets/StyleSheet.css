@@ -20,46 +20,53 @@ body {
     color: ghostwhite;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 8vh 8vh 1fr 1fr;
     grid-template-areas:
         "header header header"
+        "headerTxt headerTxt headerTxt"
         "greenhouse customer order"
         "greenhouseTable customerTable orderTable"
 }
 
-.header{
+.header {
     grid-area: header;
+    text-align: center;
+}
+
+.headerTxt {
+    grid-area: headerTxt;
+    text-align: center;
 }
 
 .greenhouse{
     grid-area: greenhouse;
 }
 
-.customer {
+.customer{
     grid-area: customer;
 }
 
-.order {
+.order{
     grid-area: order;
 }
 
-.greenhouseTable {
+.greenhouseTable{
     grid-area: greenhouseTable;
 }
 
-.order {
-    grid-area: order;
+.customerTable{
+    grid-area: customerTable;
 }
 
-.order {
-    grid-area: order;
+.orderTable{
+    grid-area: orderTable;
 }
 
 /*********************************************
 * FORM
 ********************************************/
 input {
-    margin: 0;
+    margin: 2px;
     border: none;
     padding: 10px;
     float: left;

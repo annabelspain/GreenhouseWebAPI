@@ -19,7 +19,7 @@ function addNewGreenhouseItem(newItemValue) {
         return;
     }
     createGreenhouseItem(greenhouseItemPlant, greenhouseItemAge, greenhouseItemOrder, greenhouseItemDescription);
-    document.getElementById("newGreenhouseDescription").value = "";
+    document.getElementById("newGreenhouseDescription").value = ""; createGreenhouseItem
 }
 
 /****************************************************************************
@@ -115,7 +115,8 @@ function createGreenhouseItem(greenhouseItemPlant, greenhouseItemAge, greenhouse
         })
 
         // add the item to the UL element so that it will appear in the browser
-        .then(item => alert('we made it'); addGreenhouseItemToDisplay(item));
+        .then(item => addGreenhouseItemToDisplay(item));
+    alert('we made it');
 }
 
 // Load the list - expecting an array of Greenhouse_items to be returned
