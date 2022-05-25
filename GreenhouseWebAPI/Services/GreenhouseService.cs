@@ -15,6 +15,15 @@ namespace GreenhouseWebAPI.Services
             _greenhouseRepository.Add(element);
             _greenhouseRepository.Save();
         }
+
+        //Below script related to XUnit test 
+        public int GetGreenhouseItemCount()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        // Continuation of ICRUD functionality 
         public void Delete(int id)
         {
             _greenhouseRepository.Delete(id);
