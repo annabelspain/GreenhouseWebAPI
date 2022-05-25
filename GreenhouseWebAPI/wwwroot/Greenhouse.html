@@ -1,63 +1,65 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="copyright" content="QA http://www.qa.com">
-    <meta name="author" content="Phillip Chan, phillip.chan@qa.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/StyleSheet.css" />
-
-
-    <title>Greenhouse Example</title>
-
-</head>
-
-<!---------------------------------------------------------------------------------------
-  A onload trigger is added to the body which will call the readGreenhouseItems() function
-  which will in turn send a REST API GET request to the microservice to read the greenhouse_list
-  from the DB
----------------------------------------------------------------------------------------->
-<body onload="readGreenhouseItems()">
+    <head>
+        <meta name="copyright" content="QA http://www.qa.com">
+        <meta name="author" content="Phillip Chan, phillip.chan@qa.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/StyleSheet.css" />  
+    </head>
 
     <!---------------------------------------------------------------------------------------
-      This is the Header
+      A onload trigger is added to the body which will call the readGreenhouseItems() function
+      which will in turn send a REST API GET request to the microservice to read the greenhouse_list
+      from the DB
     ---------------------------------------------------------------------------------------->
-    <div class="header">
-        <h1>Greenhouse Example</h1>
-        <hr />
-        <form action="javascript:addNewGreenhouseItem()" style="margin-top: 10px">
+    <body class="container">
 
-            <label for="newGreenhouseItemPlant">Please enter a Plant Item</label>
-            <input type="text" id="newGreenhouseItemPlant" placeholder="Plant...">
+        <title class="header">Greenhouse Example</title>
 
-            <label for="newGreenhouseItemAge">Please enter a Plant Age</label>
-            <input type="text" id="newGreenhouseItemAge" placeholder="Age...">
+        <div onload="readGreenhouseItems()">
 
-            <label for="newGreenhouseItemOrder">Please enter an Order</label>
-            <input type="text" id="newGreenhouseItemOrder" placeholder="Order...">
+            <!---------------------------------------------------------------------------------------
+          This is the Header
+        ---------------------------------------------------------------------------------------->
+            <div class="greenhouse">
+                <h1>Greenhouse</h1>
+                <hr />
+                <form action="javascript:addNewGreenhouseItem()" style="margin-top: 10px">
 
-            <label for="newGreenhouseItemDescription">Please enter an Description</label>
-            <input type="text" id="newGreenhouseItemDescription" placeholder="Description...">
+                    <label for="newGreenhouseItemPlant">Please enter a Plant Item</label>
+                    <input type="text" id="newGreenhouseItemPlant" placeholder="Plant...">
 
-            <input type="submit" value="Add" class="addButton" />
-        </form>
-    </div>
+                    <label for="newGreenhouseItemAge">Please enter a Plant Age</label>
+                    <input type="text" id="newGreenhouseItemAge" placeholder="Age...">
 
-    <!---------------------------------------------------------------------------------------
-      HTML element to hold the GreenhouseList.  This is where all the GreenhouseItems will be displayed
-    ---------------------------------------------------------------------------------------->
-    <ul id="greenhouseList">
-        <!-- This list is empty at start and is populated by the readGreenhouseItems() function
-            called by the onload trigger (see the body element above)
-        -->
-    </ul>
+                    <label for="newGreenhouseItemOrder">Please enter an Order</label>
+                    <input type="text" id="newGreenhouseItemOrder" placeholder="Order...">
+
+                    <label for="newGreenhouseItemDescription">Please enter an Description</label>
+                    <input type="text" id="newGreenhouseItemDescription" placeholder="Description...">
+
+                    <input type="submit" value="Add" class="addButton" />
+                </form>
+            </div>
+
+            <!---------------------------------------------------------------------------------------
+          HTML element to hold the GreenhouseList.  This is where all the GreenhouseItems will be displayed
+        ---------------------------------------------------------------------------------------->
+            <ul class="greenhouseTable" id="greenhouseList">
+                <!-- This list is empty at start and is populated by the readGreenhouseItems() function
+                called by the onload trigger (see the body element above)
+            -->
+            </ul>
 
 
-    <!---------------------------------------------------------------------------------------
-      Scripts
-    ---------------------------------------------------------------------------------------->
-    <script type="text/javascript" src="js/JavaScript.js"></script>
+            <!---------------------------------------------------------------------------------------
+          Scripts
+        ---------------------------------------------------------------------------------------->
+            <script type="text/javascript" src="js/JavaScript.js"></script>
+
+        </div>
 
 
-</body>
+    </body>
 </html>

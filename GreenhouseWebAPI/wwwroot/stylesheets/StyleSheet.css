@@ -1,9 +1,11 @@
 ﻿
+/*
 body {
     margin: 0;
     min-width: 720px;
     font-family: sans-serif;
 }
+    */
 
 /* Include the padding and border in an element's total width and height */
 * {
@@ -11,16 +13,51 @@ body {
 }
 
 /*********************************************
-         * Header
-         ********************************************/
-.header {
-    background-color: black;
-    height: 155px;
-    color: white;
-    padding: 10px;
-    margin: 0;
+* CONTAINER - CSS GRIDS
+********************************************/
+.container {
+    background-color: rgb(20, 20, 20);
+    color: ghostwhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "greenhouse customer order"
+        "greenhouseTable customerTable orderTable"
 }
 
+.header{
+    grid-area: header;
+}
+
+.greenhouse{
+    grid-area: greenhouse;
+}
+
+.customer {
+    grid-area: customer;
+}
+
+.order {
+    grid-area: order;
+}
+
+.greenhouseTable {
+    grid-area: greenhouseTable;
+}
+
+.order {
+    grid-area: order;
+}
+
+.order {
+    grid-area: order;
+}
+
+/*********************************************
+* FORM
+********************************************/
 input {
     margin: 0;
     border: none;
@@ -35,10 +72,10 @@ input {
     cursor: pointer;
 }
 
-    .addButton:hover {
-        background-color: cornflowerblue;
-        color: white;
-    }
+.addButton:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
 
 label {
     float: left;
@@ -47,67 +84,67 @@ label {
 }
 
 /*********************************************
-         * GREENHOUSE_ITEMS List
-         ********************************************/
+* GREENHOUSE_ITEMS List
+********************************************/
 
 /* Remove margins and padding from the ul element (unordered lis)  so that the list is flushed with the
-           browser borders instead of leaving a gap */
+    browser borders instead of leaving a gap */
 ul {
-    margin: 0;
-    padding: 0;
+margin: 0;
+padding: 0;
 }
 
-    /* Each li element with the ul will hold a greenhouse_item */
-    ul li {
-        cursor: pointer;
-        padding: 12px;
-        list-style-type: none;
-        background: #eee;
-        font-size: 18px;
-    }
+/* Each li element with the ul will hold a greenhouse_item */
+ul li {
+cursor: pointer;
+padding: 12px;
+list-style-type: none;
+background: #eee;
+font-size: 18px;
+}
 
-        /* Set all odd list items to a different background colour (zebra-stripes) */
-        ul li:nth-child(odd) {
-            background: #f9f9f9;
-        }
+/* Set all odd list items to a different background colour (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
 
-        /* Darker background-color on hover */
-        ul li:hover {
-            background: #ddd;
-        }
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
 
-        /* When clicked on, change the background colour and strike out text */
-        ul li.checked {
-            background: #888;
-            color: #fff;
-            text-decoration: line-through;
-        }
+/* When clicked on, change the background colour and strike out text */
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
 
 /* CSS style to hide the "tick" symbol if an item status is not set to "DONE"
-           This is done in code - see the addGreenhouseItemToDisplay() function where the element is classList.toggle() */
+    This is done in code - see the addGreenhouseItemToDisplay() function where the element is classList.toggle() */
 .tickHidden {
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    visibility: hidden;
+float: left;
+padding-left: 15px;
+padding-right: 15px;
+visibility: hidden;
 }
 
 /* When clicked on, also show the "tick" symbol.  Again this is done in code.
-           see the addGreenhouseItemToDisplay() function  */
+    see the addGreenhouseItemToDisplay() function  */
 .tickVisible {
-    visibility: visible;
+visibility: visible;
 }
 
 .close {
-    padding-left: 5px;
-    padding-right: 5px;
-    float: right;
+padding-left: 5px;
+padding-right: 5px;
+float: right;
 }
 
-    /* This adds a hover selector to the close class. That is any elements attached to the close class with change to
-           a RED with WHITE background.  In this case, this will be the close "button" for each of the greenhouse_item
-        */
-    .close:hover {
-        background-color: red;
-        color: white;
-    }
+/* This adds a hover selector to the close class. That is any elements attached to the close class with change to
+    a RED with WHITE background.  In this case, this will be the close "button" for each of the greenhouse_item
+*/
+.close:hover {
+background-color: red;
+color: white;
+}
